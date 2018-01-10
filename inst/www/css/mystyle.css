@@ -33,7 +33,6 @@ html,body{
 	padding:20px;
 	text-align:center;
 }
-
 .plotdiv,.inputdiv{
 	/* height:100%; */
 	background-color:rgba(220,220,220,0.4);
@@ -126,11 +125,34 @@ html,body{
 	width:110px;
 	height:45px;
 	border-radius:10px;
-	background-color:rgba(83,117,143,0.2);
+	/* background-color:rgba(83,117,143,0.2); */
+	background-color:rgba(80,80,80,0.9);
 	color:white;
 	box-shadow: 1px 1px 15px grey;
 	text-align:center;
 	font-size:15pt;
 	line-height:35px;
 	cursor:pointer;
+}
+.footer{
+	text-align:center;
+	line-height:50px;
+	/* background-color:rgba(190,190,190,1);*/
+	color:gray; 
+	height:50px;
+	width:100%;
+	position:relative;
+	bottom:0;
+}
+.fa-question-circle-o{
+	padding-left:10px;
+	cursor:pointer;
+}
+.modal{
+	position:unset;
+	top:30%;
+}
+.tooltip{
+	position:inherit;
+	opacity:1;
 }
