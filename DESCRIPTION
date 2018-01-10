@@ -1,0 +1,10 @@
+Package: rossmann
+Type: Package
+Title: rossmann sales predict(form kaggle data)
+Version: 0.1.0
+Author: nkmumis103
+Maintainer: NKMUmis103 <nkmumis103@gmail.com>
+Description: rossmann sales predict(form kaggle data),this is our Graduation topic.
+License: use this package with our html
+Encoding: UTF-8
+LazyData: true

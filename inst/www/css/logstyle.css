@@ -1,0 +1,55 @@
+html,body{
+	font-family:Microsoft JhengHei;
+	background-image:url("../img/background.jpg");
+	background-attachment: fixed;
+	background-size:cover;
+	/* background-color:rgba(218,236,243,0.5); */
+	padding:0;
+	margin:0;
+	height:100%;
+}
+.container{
+	padding:0;
+	margin:0;
+	width:100%;
+	height:100%;
+	font-size:14pt;
+	text-align:center;
+	/* margin-top:140px; */
+}
+.navbar{
+	background-color:/* rgb(210,220,220); */rgba(28,165,184,1);
+	color:rgb(255,255,255);/* rgb(255,64,78) */
+	font-family:Microsoft JhengHei;
+	font-size:18pt;
+	font-weight:bold;
+	/* height:5px; */
+	width:100%;
+	line-height:45px;
+	padding:0 10px;
+	border-radius:0;
+	margin-top:140px;
+}
+.logo{
+	padding-top:3.5%;
+	padding-bottom:3.5%;
+	text-align:center;
+}
+.form-control{
+	margin:8px 0;
+	font-size:12pt;
+}
+.btn{
+	font-size:16pt;
+	font-weight:bold;
+}
+.login_form{
+	position:relative;
+	left:30%;
+	width:40%;
+	padding-top:4%;
+	padding-bottom:4%;
+	text-align:center;
+	border-radius:10px;
+	background-color:rgba(180,180,180,0.2);
+}
