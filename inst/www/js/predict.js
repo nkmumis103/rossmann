@@ -83,7 +83,7 @@ $(document).ready(function(){
 		get_val();
 		
 		if((Store=="")||(DayOfWeek=="")||(today=="")||(Promo=="")||(Open=="")||(SchoolHoliday=="")||(StoreType=="")||(Assortment=="")||(CompetitionDistance=="")||(CompetitionOpenSinceYear<1911)||(CompetitionOpenSinceMonth=="")||(CompetitionOpenSinceMonth>0)||(Promo2=="")){
-			alert("資料格式錯誤，請填入完整資料!!");
+			alert("資料格式錯誤，請填入完整資料!!22222");
 			//console.log(Store,DayOfWeek,today,Promo,Open,SchoolHoliday,StoreType,Assortment,CompetitionDistance,CompetitionOpenSinceYear,CompetitionOpenSinceMonth,Promo2);
 			$("#submit").removeAttr("disabled");
 			$("#submit_fut").removeAttr("disabled");
