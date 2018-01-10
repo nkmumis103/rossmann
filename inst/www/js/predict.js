@@ -1,8 +1,6 @@
 $(document).ready(function(){
 	var Store,DayOfWeek,today,Promo,Open,SchoolHoliday,StoreType,Assortment,CompetitionDistance,CompetitionOpenSinceYear,CompetitionOpenSinceMonth,Promo2,Promo2SinceYear,Promo2SinceWeek,PromoInterval,best_Promo,best_SchoolHoliday,best_Promo2;
 	/* $(".pred").css("display", "none"); */
-	//$.getJSON("",function()
-	
 	$("#submit").on("click", function(){ 
 	//disable the button to prevent multiple clicks
 		get_val();

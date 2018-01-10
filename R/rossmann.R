@@ -2,7 +2,7 @@ rossmann = function(Store,DayOfWeek,Date,Promo,Open,SchoolHoliday,StoreType,Asso
                     CompetitionOpenSinceMonth,Promo2,Promo2SinceYear,Promo2SinceWeek,PromoInterval){
 
   input=data.frame(Store,DayOfWeek,Date,Open,Promo,SchoolHoliday,StoreType,Assortment,CompetitionDistance,
-                  CompetitionOpenSinceMonth,CompetitionOpenSinceYear,Promo2,Promo2SinceWeek,Promo2SinceYear,PromoInterval)
+                   CompetitionOpenSinceMonth,CompetitionOpenSinceYear,Promo2,Promo2SinceWeek,Promo2SinceYear,PromoInterval)
 
   input$Date=as.Date(input$Date)
   input$month=as.integer(format(input$Date, "%m"))
