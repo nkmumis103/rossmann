@@ -78,10 +78,8 @@ rossmann = function(Store,DayOfWeek,Date,Promo,Open,SchoolHoliday,StoreType,Asso
   best_pred = exp(best_pred)-1
   #best_pred
 
-  all =  c(Store,DayOfWeek,Date,Open,Promo,SchoolHoliday,StoreType,Assortment,CompetitionDistance,
-           CompetitionOpenSinceMonth,CompetitionOpenSinceYear,Promo2,Promo2SinceWeek,Promo2SinceYear,PromoInterval)
   list(
-    message = all,#newdata,
+    message = newdata,
     best_pair_Promo = best_Promo,
     best_pair_SchoolHoliday = best_SchoolHoliday,
     best_pair_Promo2 = best_Promo2,
