@@ -25,9 +25,6 @@ $(document).ready(function(){
 			$(".gotop").css('display','block');
 		}
 	});
-	$(".fa-question-circle-o").on("click",function(){
-		
-	});
 	$(".tooltip").tooltipster({
 		side:'bottom'
 	});

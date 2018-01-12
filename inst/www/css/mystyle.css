@@ -148,10 +148,6 @@ html,body{
 	padding-left:10px;
 	cursor:pointer;
 }
-.modal{
-	position:unset;
-	top:30%;
-}
 .tooltip{
 	position:inherit;
 	opacity:1;
