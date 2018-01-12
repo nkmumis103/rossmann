@@ -13,8 +13,8 @@ $(document).ready(function(){
 		else{ */
 			/* $(".pred").css('height','100px'); */	
 		if((Store=="")||(DayOfWeek=="")||(today=="")||(Promo=="")||(Open=="")||(SchoolHoliday=="")||(StoreType=="")||(Assortment=="")||(CompetitionDistance=="")||(CompetitionOpenSinceYear<1911)||(CompetitionOpenSinceMonth=="")||(CompetitionOpenSinceMonth>9)||(Promo2=="")){
-			alert("資料格式錯誤，請填入完整資料!!");
-			//console.log(Store,DayOfWeek,today,Promo,Open,SchoolHoliday,StoreType,Assortment,CompetitionDistance,CompetitionOpenSinceYear,CompetitionOpenSinceMonth,Promo2);
+			//alert("資料格式錯誤，請填入完整資料!!");
+			console.log(Store,DayOfWeek,today,Promo,Open,SchoolHoliday,StoreType,Assortment,CompetitionDistance,CompetitionOpenSinceYear,CompetitionOpenSinceMonth,Promo2);
 			$("#submit").removeAttr("disabled");
 			$("#submit_fut").removeAttr("disabled");
 		}
@@ -63,8 +63,8 @@ $(document).ready(function(){
 			
 			//if R returns an error, alert the error message
 			req.fail(function(err){
-				alert("資料格式錯誤，請填入完整資料!!");
-				//alert("Server error: " + req.responseText + "error：" + JSON.stringify(err));
+				//alert("資料格式錯誤，請填入完整資料!!");
+				console.log("Server error: " + req.responseText + "error：" + JSON.stringify(err));
 			});
 			
 			//after request complete, re-enable the button 
@@ -82,8 +82,8 @@ $(document).ready(function(){
 		get_val();
 		
 		if((Store=="")||(DayOfWeek=="")||(today=="")||(Promo=="")||(Open=="")||(SchoolHoliday=="")||(StoreType=="")||(Assortment=="")||(CompetitionDistance=="")||(CompetitionOpenSinceYear<1911)||(CompetitionOpenSinceMonth=="")||(CompetitionOpenSinceMonth>9)||(Promo2=="")){
-			alert("資料格式錯誤，請填入完整資料!!");
-			//console.log(Store,DayOfWeek,today,Promo,Open,SchoolHoliday,StoreType,Assortment,CompetitionDistance,CompetitionOpenSinceYear,CompetitionOpenSinceMonth,Promo2);
+			//alert("資料格式錯誤，請填入完整資料!!");
+			console.log(Store,DayOfWeek,today,Promo,Open,SchoolHoliday,StoreType,Assortment,CompetitionDistance,CompetitionOpenSinceYear,CompetitionOpenSinceMonth,Promo2);
 			$("#submit").removeAttr("disabled");
 			$("#submit_fut").removeAttr("disabled");
 		}
@@ -111,8 +111,8 @@ $(document).ready(function(){
 				 $("#submit").removeAttr("disabled");
 				$("#submit_fut").removeAttr("disabled");
 			}).fail(function(err){
-				alert("資料格式錯誤，請填入完整資料!!");
-				//alert("Server error: " + req.responseText + "error：" + JSON.stringify(err));
+				//alert("資料格式錯誤，請填入完整資料!!");
+				console.log("Server error: " + req.responseText + "error：" + JSON.stringify(err));
 			});
 		}
 	});
