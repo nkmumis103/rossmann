@@ -81,13 +81,13 @@ $(document).ready(function(){
 		$("#submit_fut").attr("disabled", "disabled");
 		get_val();
 		
-		if((Store=="")||(DayOfWeek=="")||(today=="")||(Promo=="")/*||(Open=="")*/||(SchoolHoliday=="")||(StoreType=="")||(Assortment=="")||(CompetitionDistance=="")||(CompetitionOpenSinceYear<1911)||(CompetitionOpenSinceMonth=="")||(CompetitionOpenSinceMonth>9)||(Promo2=="")){
+		/*if((Store=="")||(DayOfWeek=="")||(today=="")||(Promo=="")||(Open=="")||(SchoolHoliday=="")||(StoreType=="")||(Assortment=="")||(CompetitionDistance=="")||(CompetitionOpenSinceYear<1911)||(CompetitionOpenSinceMonth=="")||(CompetitionOpenSinceMonth>9)||(Promo2=="")){
 			//alert("資料格式錯誤，請填入完整資料!!");
 			console.log(Store,DayOfWeek,today,Promo,Open,SchoolHoliday,StoreType,Assortment,CompetitionDistance,CompetitionOpenSinceYear,CompetitionOpenSinceMonth,Promo2);
 			$("#submit").removeAttr("disabled");
 			$("#submit_fut").removeAttr("disabled");
 		}
-		else{
+		else{*/
 			$(".preddiv").css('height','530px');
 			$(".pred").css("display", "none");
 			$("#output_plot").css("display", "block");
@@ -114,7 +114,7 @@ $(document).ready(function(){
 				//alert("資料格式錯誤，請填入完整資料!!");
 				console.log("Server error: " + req.responseText + "error：" + JSON.stringify(err));
 			});
-		}
+		//}
 	});
 	
 	function get_val(){

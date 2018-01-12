@@ -3,12 +3,12 @@ $(document).ready(function(){
 	$("#push").on("click", function(){ 
 		$("#push").attr("disabled", "disabled");
 		get_val();
-		if((Store=="")||(DayOfWeek=="")||(today=="")||(Promo=="")/*||(Open=="")*/||(SchoolHoliday=="")||(StoreType=="")||(Assortment=="")||(CompetitionDistance=="")||(CompetitionOpenSinceYear<1911)||(CompetitionOpenSinceMonth=="")||(CompetitionOpenSinceMonth>9)||(Promo2=="")||(Sales=="")){
+		/*if((Store=="")||(DayOfWeek=="")||(today=="")||(Promo=="")||(Open=="")||(SchoolHoliday=="")||(StoreType=="")||(Assortment=="")||(CompetitionDistance=="")||(CompetitionOpenSinceYear<1911)||(CompetitionOpenSinceMonth=="")||(CompetitionOpenSinceMonth>9)||(Promo2=="")||(Sales=="")){
 			alert("資料格式錯誤，請填入完整資料!!");
 			//console.log(Store,DayOfWeek,today,Promo,Open,SchoolHoliday,StoreType,Assortment,CompetitionDistance,CompetitionOpenSinceYear,CompetitionOpenSinceMonth,Promo2,Sales);
 			$("#push").removeAttr("disabled");
 		}
-		else{
+		else{*/
 			//console.log(Store,DayOfWeek,today,Promo,Open,SchoolHoliday,StoreType,Assortment,CompetitionDistance,CompetitionOpenSinceYear,CompetitionOpenSinceMonth,Promo2,Promo2SinceYear,Promo2SinceWeek,PromoInterval,Sales);
 			$.ajax({
 				type: 'POST',
@@ -44,7 +44,7 @@ $(document).ready(function(){
 					$("#push").removeAttr("disabled");
 				},
 			});
-		}
+		//}
 	});
 	
 	function get_val(){
