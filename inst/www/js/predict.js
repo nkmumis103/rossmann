@@ -1,8 +1,6 @@
 $(document).ready(function(){
 	var Store,DayOfWeek,today,Promo,Open,SchoolHoliday,StoreType,Assortment,CompetitionDistance,CompetitionOpenSinceYear,CompetitionOpenSinceMonth,Promo2,Promo2SinceYear,Promo2SinceWeek,PromoInterval,best_Promo,best_SchoolHoliday,best_Promo2;
 	/* $(".pred").css("display", "none"); */
-	//$.getJSON("",function()
-	
 	$("#submit").on("click", function(){ 
 	//disable the button to prevent multiple clicks
 		get_val();
@@ -14,7 +12,7 @@ $(document).ready(function(){
 		}
 		else{ */
 			/* $(".pred").css('height','100px'); */	
-		if((Store=="")||(DayOfWeek=="")||(today=="")||(Promo=="")/*||(Open=="")*/||(SchoolHoliday=="")||(StoreType=="")||(Assortment=="")||(CompetitionDistance=="")||(CompetitionOpenSinceYear<1911)||(CompetitionOpenSinceMonth=="")||(CompetitionOpenSinceMonth>9)||(Promo2=="")){
+		if((Store=="")||(DayOfWeek=="")||(today=="")||(Promo=="")||(Open=="")||(SchoolHoliday=="")||(StoreType=="")||(Assortment=="")||(CompetitionDistance=="")||(CompetitionOpenSinceYear<1911)||(CompetitionOpenSinceMonth=="")||(CompetitionOpenSinceMonth>9)||(Promo2=="")){
 			alert("資料格式錯誤，請填入完整資料!!");
 			//console.log(Store,DayOfWeek,today,Promo,Open,SchoolHoliday,StoreType,Assortment,CompetitionDistance,CompetitionOpenSinceYear,CompetitionOpenSinceMonth,Promo2);
 			$("#submit").removeAttr("disabled");
@@ -83,7 +81,7 @@ $(document).ready(function(){
 		$("#submit_fut").attr("disabled", "disabled");
 		get_val();
 		
-		if((Store=="")||(DayOfWeek=="")||(today=="")||(Promo=="")/*||(Open=="")*/||(SchoolHoliday=="")||(StoreType=="")||(Assortment=="")||(CompetitionDistance=="")||(CompetitionOpenSinceYear<1911)||(CompetitionOpenSinceMonth=="")||(CompetitionOpenSinceMonth>9)||(Promo2=="")){
+		if((Store=="")||(DayOfWeek=="")||(today=="")||(Promo=="")||(Open=="")||(SchoolHoliday=="")||(StoreType=="")||(Assortment=="")||(CompetitionDistance=="")||(CompetitionOpenSinceYear<1911)||(CompetitionOpenSinceMonth=="")||(CompetitionOpenSinceMonth>9)||(Promo2=="")){
 			alert("資料格式錯誤，請填入完整資料!!");
 			//console.log(Store,DayOfWeek,today,Promo,Open,SchoolHoliday,StoreType,Assortment,CompetitionDistance,CompetitionOpenSinceYear,CompetitionOpenSinceMonth,Promo2);
 			$("#submit").removeAttr("disabled");
