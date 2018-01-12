@@ -14,8 +14,8 @@ $(document).ready(function(){
 		}
 		else{ */
 			/* $(".pred").css('height','100px'); */	
-		if((Store=="")/*||(DayOfWeek=="")||(today=="")||(Promo=="")*/||(Open=="")/*||(SchoolHoliday=="")||(StoreType=="")||(Assortment=="")||(CompetitionDistance=="")||(CompetitionOpenSinceYear<1911)||(CompetitionOpenSinceMonth=="")||(CompetitionOpenSinceMonth>9)||(Promo2=="")*/){
-			alert("資料格式錯誤，請填入完整資料!!22");
+		if((Store=="")||(DayOfWeek=="")||(today=="")||(Promo=="")/*||(Open=="")*/||(SchoolHoliday=="")||(StoreType=="")||(Assortment=="")||(CompetitionDistance=="")||(CompetitionOpenSinceYear<1911)||(CompetitionOpenSinceMonth=="")||(CompetitionOpenSinceMonth>9)||(Promo2=="")){
+			alert("資料格式錯誤，請填入完整資料!!");
 			//console.log(Store,DayOfWeek,today,Promo,Open,SchoolHoliday,StoreType,Assortment,CompetitionDistance,CompetitionOpenSinceYear,CompetitionOpenSinceMonth,Promo2);
 			$("#submit").removeAttr("disabled");
 			$("#submit_fut").removeAttr("disabled");
