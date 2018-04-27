@@ -2,10 +2,10 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">	
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>RSR銷售預測系統</title>
-		
+
 		<link rel="stylesheet" href="bootstrap/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="tooltipster/dist/css/tooltipster.bundle.min.css" />
 		<link rel="stylesheet" href="css/mystyle.css">
@@ -20,8 +20,9 @@
 				歷史銷售統計圖表<i class="fa fa-question-circle-o tooltip" aria-hidden="true" title="點擊圖表後即可觀看歷史動態圖表"></i>
 				</div>
 				<div class="historyPlot">
-					<a href="plot.html" target="_blank"><img src="img/Rplot.png"/></a>
-					<h4>點擊圖片進入歷年動態圖表↑</h4>
+					<iframe src="plot.html" width="300px" height="200px"></iframe>
+					<!-- <a href="plot.html" target="_blank"><img src="img/Rplot.png"/></a>
+					<h4>點擊圖片進入歷年動態圖表↑</h4> -->
 				</div>
 			</div>
 			<div class="inputdiv">
@@ -97,14 +98,14 @@
 				</form>
 				<div class="col-sm-12 preddiv">
 					<label class="pred" id="output_sale" style="display:none;">
-						
+
 					</label>
 					<label class="pred" id="output_plot" style="display:none;">
-						
+
 					</label>
 				</div>
 			</div>
-			
+
 			<div class="inputdiv">
 				<div class="col-sm-12 predtitle">
 					上傳資料<i class="fa fa-question-circle-o tooltip" aria-hidden="true" title="輸入個欄位資料及銷售額，即可將資料上傳至資料庫成為新的一筆數據"></i>
@@ -180,14 +181,14 @@
 			@NKMUMIS專題團隊 莊晴安 劉炤妤 張煦薇 王彥甯 張簡珮伃
 			</div>
 		</div>
-		
+
 		<div class="gotop">
 			<i class="fa fa-chevron-up" aria-hidden="true"></i>
 		</div>
 		<div class="gobottom">
 			上傳資料↓
 		</div>
-		
+
 		<script src="js/jquery.min.js"></script>
 		<script src="bootstrap/bootstrap.min.js"></script>
 		<script type="text/javascript" src="tooltipster/dist/js/tooltipster.bundle.min.js"></script>
