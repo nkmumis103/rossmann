@@ -17,7 +17,7 @@ $(document).ready(function(){
 				$("#submit").removeAttr("disabled");
 				$("#submit_fut").removeAttr("disabled");
 			}
-			else if((Store=="")||(DayOfWeek=="")||(today=="")||(Promo=="")||(Open=="")||(SchoolHoliday=="")||(StoreType=="")||(Assortment=="")||(CompetitionDistance=="")||(CompetitionOpenSinceYear<1911)||(CompetitionOpenSinceMonth>12)||(Promo2=="")){
+			else if((Store=="")||(DayOfWeek=="")||(today=="")||(Promo=="")||(Open=="")||(SchoolHoliday=="")||(StoreType=="")||(Assortment=="")||(CompetitionDistance=="")||(CompetitionOpenSinceYear<1911)||(CompetitionOpenSinceMonth>"12")||(Promo2=="")){
 				console.log(Store,DayOfWeek,today,Promo,Open,SchoolHoliday,StoreType,Assortment,CompetitionDistance,CompetitionOpenSinceYear,CompetitionOpenSinceMonth,Promo2);
 				alert("資料格式錯誤，請填入完整資料!!(格式2)");
 				$("#submit").removeAttr("disabled");
