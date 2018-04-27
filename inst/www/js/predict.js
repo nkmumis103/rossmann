@@ -14,7 +14,7 @@ $(document).ready(function(){
 			/* $(".pred").css('height','100px'); */
 		if((Store=="")||(DayOfWeek=="")||(today=="")||(Promo=="")||(Open=="")||(SchoolHoliday=="")||(StoreType=="")||(Assortment=="")||(CompetitionDistance=="")||(CompetitionOpenSinceYear<1911)||(CompetitionOpenSinceMonth=="")||(CompetitionOpenSinceMonth>12)||(Promo2=="")){
 			console.log(Store,DayOfWeek,today,Promo,Open,SchoolHoliday,StoreType,Assortment,CompetitionDistance,CompetitionOpenSinceYear,CompetitionOpenSinceMonth,Promo2);
-			alert("資料格式錯誤，請填入完整資料!!");
+			alert("資料格式錯誤，請填入完整資料!!(格式)");
 			$("#submit").removeAttr("disabled");
 			$("#submit_fut").removeAttr("disabled");
 		}
@@ -64,7 +64,7 @@ $(document).ready(function(){
 			//if R returns an error, alert the error message
 			req.fail(function(err){
 				console.log("Server error: " + req.responseText + "error：" + JSON.stringify(err));
-				alert("資料格式錯誤，請填入完整資料!!");
+				alert("資料格式錯誤，請填入完整資料!!(送出)");
 			});
 
 			//after request complete, re-enable the button
