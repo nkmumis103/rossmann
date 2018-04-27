@@ -7,72 +7,71 @@ $(document).ready(function(){
 		$("#submit").attr("disabled", "disabled");
 		$("#submit_fut").attr("disabled", "disabled");
 		if(Open==0){
-			alert("當日店休!!");
-			$("#output_sale").html(today+" 的預測銷售額為："+output.message+"(USD)");
+			// alert("當日店休!!");
+			$("#output_sale").html("當日店休！"+today+" 的預測銷售額為：0 (USD)");
 		}
 		else{
-			/* $(".pred").css('height','100px'); */
-		if((Store=="")||(DayOfWeek=="")||(today=="")||(Promo=="")||(Open=="")||(SchoolHoliday=="")||(StoreType=="")||(Assortment=="")||(CompetitionDistance=="")||(CompetitionOpenSinceYear<1911)||(CompetitionOpenSinceMonth=="")||(CompetitionOpenSinceMonth>12)||(Promo2=="")){
-			console.log(Store,DayOfWeek,today,Promo,Open,SchoolHoliday,StoreType,Assortment,CompetitionDistance,CompetitionOpenSinceYear,CompetitionOpenSinceMonth,Promo2);
-			alert("資料格式錯誤，請填入完整資料!!(格式)");
-			$("#submit").removeAttr("disabled");
-			$("#submit_fut").removeAttr("disabled");
-		}
-		else{
-			var req = ocpu.rpc("rossmann", {
-			  Store : Store,
-			  DayOfWeek : DayOfWeek,
-			  Date : today,
-			  Promo : Promo,
-			  Open : Open,
-			  SchoolHoliday : SchoolHoliday,
-			  StoreType : StoreType,
-			  Assortment : Assortment,
-			  CompetitionDistance : CompetitionDistance,
-			  CompetitionOpenSinceYear : CompetitionOpenSinceYear,
-			  CompetitionOpenSinceMonth : CompetitionOpenSinceMonth,
-			  Promo2 : Promo2,
-			  Promo2SinceYear : Promo2SinceYear,
-			  Promo2SinceWeek : Promo2SinceWeek,
-			  PromoInterval : PromoInterval
-			}, function(output){
-				$(".preddiv").css('height','170px');
-				$(".pred").css("display", "none");
-				$("#output_sale").css("display", "block");
-				if(output.best_pair_Promo==0){
-					best_Promo="否";
-				}
-				else if(output.best_pair_Promo==1){
-					best_Promo="是";
-				}
-				if(output.best_pair_SchoolHoliday==0){
-					best_SchoolHoliday="否";
-				}
-				else if(output.best_pair_SchoolHoliday==1){
-					best_SchoolHoliday="是";
-				}
-				if(output.best_pair_Promo2==0){
-					best_Promo2="否";
-				}
-				else if(output.best_pair_Promo2==1){
-					best_Promo2="是";
-				}
-				$("#output_sale").html(today+" 的預測銷售額為："+output.message+"(USD)<hr>最佳配置：促銷為『"+best_Promo+"』，持續促銷為『"+best_Promo2+"』<br><div style='color:red;'>最佳銷售額為："+output.best_sales+"(USD)</div>");
-				//alert(output.message);學校休假日為『"+best_SchoolHoliday+"』，
-			});
-
-			//if R returns an error, alert the error message
-			req.fail(function(err){
-				console.log("Server error: " + req.responseText + "error：" + JSON.stringify(err));
-				alert("資料格式錯誤，請填入完整資料!!(送出)");
-			});
-
-			//after request complete, re-enable the button
-			req.always(function(){
+			if((Store=="")||(DayOfWeek=="")||(today=="")||(Promo=="")||(Open=="")||(SchoolHoliday=="")||(StoreType=="")||(Assortment=="")||(CompetitionDistance=="")||(CompetitionOpenSinceYear<1911)||(CompetitionOpenSinceMonth=="")||(Promo2=="")){
+				console.log(Store,DayOfWeek,today,Promo,Open,SchoolHoliday,StoreType,Assortment,CompetitionDistance,CompetitionOpenSinceYear,CompetitionOpenSinceMonth,Promo2);
+				alert("資料格式錯誤，請填入完整資料!!(格式)");
 				$("#submit").removeAttr("disabled");
 				$("#submit_fut").removeAttr("disabled");
-			});
-		}
+			}
+			else{
+				var req = ocpu.rpc("rossmann", {
+				  Store : Store,
+				  DayOfWeek : DayOfWeek,
+				  Date : today,
+				  Promo : Promo,
+				  Open : Open,
+				  SchoolHoliday : SchoolHoliday,
+				  StoreType : StoreType,
+				  Assortment : Assortment,
+				  CompetitionDistance : CompetitionDistance,
+				  CompetitionOpenSinceYear : CompetitionOpenSinceYear,
+				  CompetitionOpenSinceMonth : CompetitionOpenSinceMonth,
+				  Promo2 : Promo2,
+				  Promo2SinceYear : Promo2SinceYear,
+				  Promo2SinceWeek : Promo2SinceWeek,
+				  PromoInterval : PromoInterval
+				}, function(output){
+					$(".preddiv").css('height','170px');
+					$(".pred").css("display", "none");
+					$("#output_sale").css("display", "block");
+					if(output.best_pair_Promo==0){
+						best_Promo="否";
+					}
+					else if(output.best_pair_Promo==1){
+						best_Promo="是";
+					}
+					if(output.best_pair_SchoolHoliday==0){
+						best_SchoolHoliday="否";
+					}
+					else if(output.best_pair_SchoolHoliday==1){
+						best_SchoolHoliday="是";
+					}
+					if(output.best_pair_Promo2==0){
+						best_Promo2="否";
+					}
+					else if(output.best_pair_Promo2==1){
+						best_Promo2="是";
+					}
+					$("#output_sale").html(today+" 的預測銷售額為："+output.message+"(USD)<hr>最佳配置：促銷為『"+best_Promo+"』，持續促銷為『"+best_Promo2+"』<br><div style='color:red;'>最佳銷售額為："+output.best_sales+"(USD)</div>");
+					//alert(output.message);學校休假日為『"+best_SchoolHoliday+"』，
+				});
+
+				//if R returns an error, alert the error message
+				req.fail(function(err){
+					console.log("Server error: " + req.responseText + "error：" + JSON.stringify(err));
+					alert("資料格式錯誤，請填入完整資料!!(送出)");
+				});
+
+				//after request complete, re-enable the button
+				req.always(function(){
+					$("#submit").removeAttr("disabled");
+					$("#submit_fut").removeAttr("disabled");
+				});
+			}
 		}
 	});
 
