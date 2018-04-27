@@ -1,24 +1,24 @@
 $(document).ready(function(){
 	var Store,DayOfWeek,today,Promo,Open,SchoolHoliday,StoreType,Assortment,CompetitionDistance,CompetitionOpenSinceYear,CompetitionOpenSinceMonth,Promo2,Promo2SinceYear,Promo2SinceWeek,PromoInterval,best_Promo,best_SchoolHoliday,best_Promo2;
 	/* $(".pred").css("display", "none"); */
-	$("#submit").on("click", function(){ 
+	$("#submit").on("click", function(){
 	//disable the button to prevent multiple clicks
 		get_val();
 		$("#submit").attr("disabled", "disabled");
 		$("#submit_fut").attr("disabled", "disabled");
-		/* if(Open==0){
+		if(Open==0){
 			alert("當日店休!!");
 			$("#output_sale").html(today+" 的預測銷售額為："+output.message+"(USD)");
 		}
-		else{ */
-			/* $(".pred").css('height','100px'); */	
-		/*if((Store=="")||(DayOfWeek=="")||(today=="")||(Promo=="")||(Open=="")||(SchoolHoliday=="")||(StoreType=="")||(Assortment=="")||(CompetitionDistance=="")||(CompetitionOpenSinceYear<1911)||(CompetitionOpenSinceMonth=="")||(CompetitionOpenSinceMonth>9)||(Promo2=="")){
+		else{
+			/* $(".pred").css('height','100px'); */
+		if((Store=="")||(DayOfWeek=="")||(today=="")||(Promo=="")||(Open=="")||(SchoolHoliday=="")||(StoreType=="")||(Assortment=="")||(CompetitionDistance=="")||(CompetitionOpenSinceYear<1911)||(CompetitionOpenSinceMonth=="")||(CompetitionOpenSinceMonth>12)||(Promo2=="")){
 			console.log(Store,DayOfWeek,today,Promo,Open,SchoolHoliday,StoreType,Assortment,CompetitionDistance,CompetitionOpenSinceYear,CompetitionOpenSinceMonth,Promo2);
 			alert("資料格式錯誤，請填入完整資料!!");
 			$("#submit").removeAttr("disabled");
 			$("#submit_fut").removeAttr("disabled");
 		}
-		else{*/
+		else{
 			var req = ocpu.rpc("rossmann", {
 			  Store : Store,
 			  DayOfWeek : DayOfWeek,
@@ -60,34 +60,34 @@ $(document).ready(function(){
 				$("#output_sale").html(today+" 的預測銷售額為："+output.message+"(USD)<hr>最佳配置：促銷為『"+best_Promo+"』，持續促銷為『"+best_Promo2+"』<br><div style='color:red;'>最佳銷售額為："+output.best_sales+"(USD)</div>");
 				//alert(output.message);學校休假日為『"+best_SchoolHoliday+"』，
 			});
-			
+
 			//if R returns an error, alert the error message
 			req.fail(function(err){
 				console.log("Server error: " + req.responseText + "error：" + JSON.stringify(err));
 				alert("資料格式錯誤，請填入完整資料!!");
 			});
-			
-			//after request complete, re-enable the button 
+
+			//after request complete, re-enable the button
 			req.always(function(){
 				$("#submit").removeAttr("disabled");
 				$("#submit_fut").removeAttr("disabled");
 			});
-		//}
-		//}
+		}
+		}
 	});
-	
-	$("#submit_fut").on("click", function(){ 
+
+	$("#submit_fut").on("click", function(){
 		$("#submit").attr("disabled", "disabled");
 		$("#submit_fut").attr("disabled", "disabled");
 		get_val();
-		
-		/*if((Store=="")||(DayOfWeek=="")||(today=="")||(Promo=="")||(Open=="")||(SchoolHoliday=="")||(StoreType=="")||(Assortment=="")||(CompetitionDistance=="")||(CompetitionOpenSinceYear<1911)||(CompetitionOpenSinceMonth=="")||(CompetitionOpenSinceMonth>9)||(Promo2=="")){
-			//alert("資料格式錯誤，請填入完整資料!!");
+
+		if((Store=="")||(DayOfWeek=="")||(today=="")||(Promo=="")||(Open=="")||(SchoolHoliday=="")||(StoreType=="")||(Assortment=="")||(CompetitionDistance=="")||(CompetitionOpenSinceYear<1911)||(CompetitionOpenSinceMonth=="")||(CompetitionOpenSinceMonth>12)||(Promo2=="")){
+			alert("資料格式錯誤，請填入完整資料!!");
 			console.log(Store,DayOfWeek,today,Promo,Open,SchoolHoliday,StoreType,Assortment,CompetitionDistance,CompetitionOpenSinceYear,CompetitionOpenSinceMonth,Promo2);
 			$("#submit").removeAttr("disabled");
 			$("#submit_fut").removeAttr("disabled");
 		}
-		else{*/
+		else{
 			$(".preddiv").css('height','530px');
 			$(".pred").css("display", "none");
 			$("#output_plot").css("display", "block");
@@ -111,12 +111,12 @@ $(document).ready(function(){
 				 $("#submit").removeAttr("disabled");
 				$("#submit_fut").removeAttr("disabled");
 			}).fail(function(err){
-				//alert("資料格式錯誤，請填入完整資料!!");
+				alert("資料格式錯誤，請填入完整資料!!");
 				console.log("Server error: " + req.responseText + "error：" + JSON.stringify(err));
 			});
-		//}
+		}
 	});
-	
+
 	function get_val(){
 		Store = Number($("#Store").val());
 		//DayOfWeek = Number($("#DayOfWeek").val());
