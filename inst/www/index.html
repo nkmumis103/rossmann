@@ -77,7 +77,7 @@
 					9.競爭對手開店年份(西元)
 					<input class="form-control" type="number" id="CompetitionOpenSinceYear" min="1911" required="required">
 					10.競爭對手開店月份
-					<input class="form-control" type="number" id="CompetitionOpenSinceMonth" min="1" max="12" required="required">
+					<input class="form-control" type="number" id="CompetitionOpenSinceMonth" min="1" max="12" required="required" onkeypress="return (/[\d]/.test(String.fromCharCode(event.keyCode)))">
 					11.是否持續促銷
 					<select class="form-control" id="Promo2" required="required">
 						<option selected disabled>請選擇</option>
