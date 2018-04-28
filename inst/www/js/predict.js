@@ -71,7 +71,7 @@ $(document).ready(function() {
 				//if R returns an error, alert the error message
 				req.fail(function(err) {
 					// console.log("Server error: " + req.responseText + "error：" + JSON.stringify(err));
-					alert("資料格式錯誤，請填入完整資料!!(送出)");
+					alert("資料格式錯誤，請填入完整資料!!");
 				});
 
 				//after request complete, re-enable the button
