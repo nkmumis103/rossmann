@@ -8,7 +8,7 @@ $(document).ready(function() {
     $("#submit_fut").attr("disabled", "disabled");
     dis1 = $("#submit").attr("class");
     console.log(dis1);
-		if(dis1.match('disabled')!=null){
+		if(dis1.match('disabled')==null){
 			if (Open == 0) {
 				// alert("當日店休!!");
 				$(".preddiv").css('height', '170px');
@@ -86,7 +86,7 @@ $(document).ready(function() {
     $("#submit_fut").attr("disabled", "disabled");
 		dis2 = $("#submit_fut").attr("class");
     console.log(dis2);
-		if(dis2.match('disabled')!=null){
+		if(dis2.match('disabled')==null){
 			var req = $("#output_plot").rplot("rossmann_fut", {
 	      Store: Store,
 	      DayOfWeek: DayOfWeek,
