@@ -4,15 +4,18 @@ $(document).ready(function() {
   $("#submit").on("click", function() {
     //disable the button to prevent multiple clicks
     get_val();
-    // $("#submit").attr("disabled", "disabled");
-    // $("#submit_fut").attr("disabled", "disabled");
+    $("#submit").attr("disabled", "disabled");
+    $("#submit_fut").attr("disabled", "disabled");
     dis1 = $("#submit").attr("class");
     console.log(dis1);
     if (Open == 0) {
       // alert("當日店休!!");
+			$(".preddiv").css('height', '170px');
+			$(".pred").css("display", "none");
+			$("#output_sale").css("display", "block");
       $("#output_sale").html("當日店休！" + today + " 的預測銷售額為：0 (USD)");
-      // $("#submit").removeAttr("disabled");
-      // $("#submit_fut").removeAttr("disabled");
+      $("#submit").removeAttr("disabled");
+      $("#submit_fut").removeAttr("disabled");
     } else {
       // if((CompetitionOpenSinceYear<1911)||(CompetitionOpenSinceMonth>12)){
       // 	console.log(Store,DayOfWeek,today,Promo,Open,SchoolHoliday,StoreType,Assortment,CompetitionDistance,CompetitionOpenSinceYear,CompetitionOpenSinceMonth,Promo2);
@@ -76,8 +79,8 @@ $(document).ready(function() {
   });
 
   $("#submit_fut").on("click", function() {
-    // $("#submit").attr("disabled", "disabled");
-    // $("#submit_fut").attr("disabled", "disabled");
+    $("#submit").attr("disabled", "disabled");
+    $("#submit_fut").attr("disabled", "disabled");
     get_val();
 
     // if((CompetitionOpenSinceYear<1911)||(CompetitionOpenSinceMonth>12)){
