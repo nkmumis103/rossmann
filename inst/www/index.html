@@ -88,7 +88,7 @@
 					</div>
 					8.與競爭對手店面距離(公尺)
 					<div class="form-group">
-					<input class="form-control" type="number" id="CompetitionDistance" min="0" required="required" onkeypress="value=value.replace(/[^\d.]/g,'')">
+					<input class="form-control" type="number" id="CompetitionDistance" min="0" required="required" onkeypress="return (/[\d]/.test(String.fromCharCode(event.keyCode)))">
 					<div class="help-block with-errors"></div>
 					</div>
 				</div>
