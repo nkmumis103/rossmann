@@ -89,9 +89,9 @@ $(document).ready(function() {
     console.log(dis2);
 		if(dis2.match('disabled')==null){
 			get_val();
-			$("#output_plot").css("display", "block");
 			$(".preddiv").css('height', '530px');
 			$(".pred").css("display", "none");
+			$("#output_plot").css("display", "block");
 			$("#submit").attr("disabled", "disabled");
 	    $("#submit_fut").attr("disabled", "disabled");
 			var req = $("#output_plot").rplot("rossmann_fut", {
