@@ -5,8 +5,8 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>RSR銷售預測系統</title>
-
-		<link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+		<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"></link>
+		<!-- <link rel="stylesheet" href="bootstrap/bootstrap.min.css"> -->
 		<link rel="stylesheet" type="text/css" href="tooltipster/dist/css/tooltipster.bundle.min.css" />
 		<link rel="stylesheet" href="css/mystyle.css">
 	</head>
@@ -29,7 +29,7 @@
 				<div class="col-sm-12 predtitle">
 					銷售預測<i class="fa fa-question-circle-o tooltip" aria-hidden="true" title="輸入各個欄位後即可預測銷售額，及未來七天銷售額"></i>
 				</div>
-				<form id="myForm" role="form" data-toggle="validator">
+				<form role="form" data-toggle="validator">
 				<div class="col-sm-4">
 					1.店家ID
 					<input class="form-control" type="number" id="Store" min="1" required="required">
@@ -115,6 +115,7 @@
 				<div class="col-sm-12 predtitle">
 					上傳資料<i class="fa fa-question-circle-o tooltip" aria-hidden="true" title="輸入個欄位資料及銷售額，即可將資料上傳至資料庫成為新的一筆數據"></i>
 				</div>
+				<form role="form" data-toggle="validator">
 				<div class="col-sm-4">
 					1.店家ID
 					<input class="form-control" type="number" id="Store_push" min="1">
@@ -181,6 +182,7 @@
 				<div class="col-sm-12 submitdiv">
 					<button type="submit" class="btn btn-primary" id="push">傳送</button>
 				</div>
+			</form>
 			</div>
 			<div class="footer">
 			@NKMUMIS專題團隊 莊晴安 劉炤妤 張煦薇 王彥甯 張簡珮伃
@@ -193,8 +195,9 @@
 		<div class="gobottom">
 			上傳資料↓
 		</div>
+		<script src='//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js'></script>
 
-		<script src="js/jquery.min.js"></script>
+		<!-- <script src="js/jquery.min.js"></script> -->
 		<script src="bootstrap/bootstrap.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
 		<script type="text/javascript" src="tooltipster/dist/js/tooltipster.bundle.min.js"></script>
