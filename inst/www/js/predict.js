@@ -79,7 +79,6 @@ $(document).ready(function() {
   });
 
   $("#submit_fut").on("click", function() {
-		$(".preddiv").css('height', '530px');
     $("#submit").attr("disabled", "disabled");
     $("#submit_fut").attr("disabled", "disabled");
     get_val();
@@ -108,9 +107,10 @@ $(document).ready(function() {
       Promo2SinceWeek: Promo2SinceWeek,
       PromoInterval: PromoInterval
     }).success(function() {
-      $(".pred").css("display", "none");
       $("#output_plot").css("display", "block");
     }).always(function() {
+			$(".preddiv").css('height', '530px');
+			$(".pred").css("display", "none");
       $("#submit").removeAttr("disabled");
       $("#submit_fut").removeAttr("disabled");
     }).fail(function(err) {
