@@ -17,7 +17,7 @@
 			</div>
 			<div class="plotdiv">
 				<div class="col-sm-12 plottitle">
-				歷史銷售統計圖表<i class="fa fa-question-circle-o tooltip" aria-hidden="true" title="點擊圖表後即可觀看歷史動態圖表"></i>
+				歷史銷售統計圖表<i class="fa fa-question-circle-o tooltip" aria-hidden="true" title="顯示歷史銷售額動態統計圖表"></i>
 				</div>
 				<div class="historyPlot">
 					<iframe src="plot.html" width="85%" height="500px" frameborder="0"></iframe>
@@ -29,12 +29,14 @@
 				<div class="col-sm-12 predtitle">
 					銷售預測<i class="fa fa-question-circle-o tooltip" aria-hidden="true" title="輸入各個欄位後即可預測銷售額，及未來七天銷售額"></i>
 				</div>
-				<form>
+				<form id="myForm" role="form" data-toggle="validator">
 				<div class="col-sm-4">
 					1.店家ID
-					<input class="form-control" type="number" id="Store" min="1" required="required">
+					<input class="form-control" type="number" id="Store" min="1" required="required" data-error="請填寫此欄位">
+					<div class="help-block with-errors"></div>
 					2.當日日期
-					<input class="form-control" type="date" id="Date" required="required">
+					<input class="form-control" type="date" id="Date" required="required" data-error="請填寫此欄位">
+					<div class="help-block with-errors"></div>
 					3.當日是否促銷
 					<select class="form-control" id="Promo" required="required">
 						<option selected disabled>請選擇</option>
@@ -71,13 +73,16 @@
 						<option value="3">c</option>
 					</select>
 					8.與競爭對手店面距離(公尺)
-					<input class="form-control" type="number" id="CompetitionDistance" min="0" required="required">
+					<input class="form-control" type="number" id="CompetitionDistance" min="0" required="required" data-error="請填寫此欄位">
+					<div class="help-block with-errors"></div>
 				</div>
 				<div class="col-sm-4">
 					9.競爭對手開店年份(西元)
-					<input class="form-control" type="number" id="CompetitionOpenSinceYear" min="1911" required="required">
+					<input class="form-control" type="number" id="CompetitionOpenSinceYear" min="1911" required="required" data-error="請填寫此欄位">
+					<div class="help-block with-errors"></div>
 					10.競爭對手開店月份
-					<input class="form-control" type="number" id="CompetitionOpenSinceMonth" min="1" max="12" required="required" onkeypress="return (/[\d]/.test(String.fromCharCode(event.keyCode)))">
+					<input class="form-control" type="number" id="CompetitionOpenSinceMonth" min="1" max="12" required="required" onkeypress="return (/[\d]/.test(String.fromCharCode(event.keyCode)))" data-error="請填寫此欄位">
+					<div class="help-block with-errors"></div>
 					11.是否持續促銷
 					<select class="form-control" id="Promo2" required="required">
 						<option selected disabled>請選擇</option>
@@ -191,6 +196,7 @@
 
 		<script src="js/jquery.min.js"></script>
 		<script src="bootstrap/bootstrap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
 		<script type="text/javascript" src="tooltipster/dist/js/tooltipster.bundle.min.js"></script>
 		<script src="https://use.fontawesome.com/a2a1b3165b.js"></script>
 		<script src="js/opencpu.js"></script>
