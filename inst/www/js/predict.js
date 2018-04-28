@@ -4,7 +4,7 @@ $(document).ready(function() {
   $("#submit").on("click", function() {
     //disable the button to prevent multiple clicks
     dis1 = $("#submit").attr("class");
-    console.log(dis1);
+    // console.log(dis1);
 		if(dis1.match('disabled')==null){
 			get_val();
 	    $("#submit").attr("disabled", "disabled");
@@ -70,7 +70,7 @@ $(document).ready(function() {
 
 				//if R returns an error, alert the error message
 				req.fail(function(err) {
-					console.log("Server error: " + req.responseText + "error：" + JSON.stringify(err));
+					// console.log("Server error: " + req.responseText + "error：" + JSON.stringify(err));
 					alert("資料格式錯誤，請填入完整資料!!(送出)");
 				});
 
@@ -86,7 +86,7 @@ $(document).ready(function() {
 
   $("#submit_fut").on("click", function() {
 		dis2 = $("#submit_fut").attr("class");
-    console.log(dis2);
+    // console.log(dis2);
 		if(dis2.match('disabled')==null){
 			get_val();
 			$(".preddiv").css('height', '530px');
@@ -115,7 +115,7 @@ $(document).ready(function() {
 	      $("#submit_fut").removeAttr("disabled");
 	    }).fail(function(err) {
 	      alert("資料格式錯誤，請填入完整資料!!");
-	      console.log("Server error: " + req.responseText + "error：" + JSON.stringify(err));
+	      // console.log("Server error: " + req.responseText + "error：" + JSON.stringify(err));
 	    });
 		}
     // if((CompetitionOpenSinceYear<1911)||(CompetitionOpenSinceMonth>12)){
