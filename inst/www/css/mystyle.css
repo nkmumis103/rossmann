@@ -75,10 +75,9 @@ html,body{
 	background-color:rgba(168,72,90,1);
 	border: 1px solid #974051;
 }
-#push:hover{
+/* #push:hover{
 	background-color:rgba(135,57,72,1);
-	/* border: 1px solid #974051; */
-}
+} */
 .preddiv{
 	padding:0 5%;
 	/* min-height:130px; */
