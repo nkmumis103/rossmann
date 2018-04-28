@@ -9,15 +9,14 @@ $(document).ready(function() {
 			get_val();
 	    $("#submit").attr("disabled", "disabled");
 	    $("#submit_fut").attr("disabled", "disabled");
-			if (Open == 0) {
-				// alert("當日店休!!");
-				$(".preddiv").css('height', '170px');
-				$(".pred").css("display", "none");
-				$("#output_sale").css("display", "block");
-				$("#output_sale").html("當日店休！" + today + " 的預測銷售額為：0 (USD)");
-				$("#submit").removeAttr("disabled");
-				$("#submit_fut").removeAttr("disabled");
-			} else {
+			// if (Open == 0) {
+			// 	$(".preddiv").css('height', '170px');
+			// 	$(".pred").css("display", "none");
+			// 	$("#output_sale").css("display", "block");
+			// 	$("#output_sale").html("當日店休！" + today + " 的預測銷售額為：0 (USD)");
+				// $("#submit").removeAttr("disabled");
+				// $("#submit_fut").removeAttr("disabled");
+			// } else {
 				// if((CompetitionOpenSinceYear<1911)||(CompetitionOpenSinceMonth>12)){
 				// 	console.log(Store,DayOfWeek,today,Promo,Open,SchoolHoliday,StoreType,Assortment,CompetitionDistance,CompetitionOpenSinceYear,CompetitionOpenSinceMonth,Promo2);
 				// 	alert("資料格式錯誤，請填入完整資料!!(格式)");
@@ -60,7 +59,12 @@ $(document).ready(function() {
 					} else if (output.best_pair_Promo2 == 1) {
 						best_Promo2 = "是";
 					}
-					$("#output_sale").html(today + " 的預測銷售額為：" + output.message + "(USD)<hr>最佳配置：促銷為『" + best_Promo + "』，持續促銷為『" + best_Promo2 + "』<br><div style='color:red;'>最佳銷售額為：" + output.best_sales + "(USD)</div>");
+					if(Open==0){
+						$("#output_sale").html("當日店休！" + today + " 的預測銷售額為：0 (USD)");
+					}
+					else{
+						$("#output_sale").html(today + " 的預測銷售額為：" + output.message + "(USD)<hr>最佳配置：促銷為『" + best_Promo + "』，持續促銷為『" + best_Promo2 + "』<br><div style='color:red;'>最佳銷售額為：" + output.best_sales + "(USD)</div>");
+					}
 					//alert(output.message);學校休假日為『"+best_SchoolHoliday+"』，
 				});
 
@@ -76,7 +80,7 @@ $(document).ready(function() {
 					$("#submit_fut").removeAttr("disabled");
 				});
 			}
-		}
+		// }
     // }
   });
 
