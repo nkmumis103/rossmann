@@ -32,10 +32,10 @@
 				<form id="myForm" role="form" data-toggle="validator">
 				<div class="col-sm-4">
 					1.店家ID
-					<input class="form-control" type="number" id="Store" min="1" required="required" data-error="請填寫此欄位">
+					<input class="form-control" type="number" id="Store" min="1" required="required">
 					<div class="help-block with-errors"></div>
 					2.當日日期
-					<input class="form-control" type="date" id="Date" required="required" data-error="請填寫此欄位">
+					<input class="form-control" type="date" id="Date" required="required">
 					<div class="help-block with-errors"></div>
 					3.當日是否促銷
 					<select class="form-control" id="Promo" required="required">
@@ -73,15 +73,15 @@
 						<option value="3">c</option>
 					</select>
 					8.與競爭對手店面距離(公尺)
-					<input class="form-control" type="number" id="CompetitionDistance" min="0" required="required" data-error="請填寫此欄位">
+					<input class="form-control" type="number" id="CompetitionDistance" min="0" required="required">
 					<div class="help-block with-errors"></div>
 				</div>
 				<div class="col-sm-4">
 					9.競爭對手開店年份(西元)
-					<input class="form-control" type="number" id="CompetitionOpenSinceYear" min="1911" required="required" data-error="請填寫此欄位">
+					<input class="form-control" type="number" id="CompetitionOpenSinceYear" min="1911" required="required">
 					<div class="help-block with-errors"></div>
 					10.競爭對手開店月份
-					<input class="form-control" type="number" id="CompetitionOpenSinceMonth" min="1" max="12" required="required" onkeypress="return (/[\d]/.test(String.fromCharCode(event.keyCode)))" data-error="請填寫此欄位">
+					<input class="form-control" type="number" id="CompetitionOpenSinceMonth" min="1" max="12" required="required" onkeypress="return (/[\d]/.test(String.fromCharCode(event.keyCode)))">
 					<div class="help-block with-errors"></div>
 					11.是否持續促銷
 					<select class="form-control" id="Promo2" required="required">
