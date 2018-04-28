@@ -2,7 +2,7 @@ $(document).ready(function() {
   var dis3, Store, DayOfWeek, today, Promo, Open, SchoolHoliday, StoreType, Assortment, CompetitionDistance, CompetitionOpenSinceYear, CompetitionOpenSinceMonth, Promo2, Promo2SinceYear, Promo2SinceWeek, PromoInterval, Sales;
   $("#push").on("click", function() {
     dis3 = $("#push").attr("class");
-    console.log(dis3);
+    // console.log(dis3);
     if (dis3.match('disabled') == null) {
 			get_val();
       $("#push").attr("disabled", "disabled");
