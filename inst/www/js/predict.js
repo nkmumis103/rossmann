@@ -89,6 +89,9 @@ $(document).ready(function() {
     console.log(dis2);
 		if(dis2.match('disabled')==null){
 			get_val();
+			$("#output_plot").css("display", "block");
+			$(".preddiv").css('height', '530px');
+			$(".pred").css("display", "none");
 			$("#submit").attr("disabled", "disabled");
 	    $("#submit_fut").attr("disabled", "disabled");
 			var req = $("#output_plot").rplot("rossmann_fut", {
@@ -108,9 +111,6 @@ $(document).ready(function() {
 	      Promo2SinceWeek: Promo2SinceWeek,
 	      PromoInterval: PromoInterval
 	    }).always(function() {
-				$("#output_plot").css("display", "block");
-				$(".preddiv").css('height', '530px');
-				$(".pred").css("display", "none");
 	      $("#submit").removeAttr("disabled");
 	      $("#submit_fut").removeAttr("disabled");
 	    }).fail(function(err) {
