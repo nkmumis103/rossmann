@@ -6,6 +6,8 @@ $(document).ready(function(){
 		get_val();
 		$("#submit").attr("disabled", "disabled");
 		$("#submit_fut").attr("disabled", "disabled");
+		var a=$("#submit").attr("disabled");
+		console.log(a);
 		if(Open==0){
 			// alert("當日店休!!");
 			$("#output_sale").html("當日店休！"+today+" 的預測銷售額為：0 (USD)");
