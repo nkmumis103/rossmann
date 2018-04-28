@@ -38,14 +38,16 @@ $(document).ready(function() {
         success: function(resp) {
           //console.log(resp);
           alert("傳送成功！");
-          $("#push").removeAttr("disabled");
         },
         error: function(jqXHR, textStatus, errorThrown) {
           //console.log(jqXHR);
           //console.log(textStatus);
           //console.log(errorThrown);
-          $("#push").removeAttr("disabled");
+					alert("傳送失敗！");
         },
+				always: function(){
+					$("#push").removeAttr("disabled");
+				}
       });
     }
     //}
