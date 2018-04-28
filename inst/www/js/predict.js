@@ -6,13 +6,13 @@ $(document).ready(function() {
     get_val();
     // $("#submit").attr("disabled", "disabled");
     // $("#submit_fut").attr("disabled", "disabled");
-    dis1 = $("#submit").attr("disabled");
+    dis1 = $("#submit").attr("class");
     console.log(dis1);
     if (Open == 0) {
       // alert("當日店休!!");
       $("#output_sale").html("當日店休！" + today + " 的預測銷售額為：0 (USD)");
-      $("#submit").removeAttr("disabled");
-      $("#submit_fut").removeAttr("disabled");
+      // $("#submit").removeAttr("disabled");
+      // $("#submit_fut").removeAttr("disabled");
     } else {
       // if((CompetitionOpenSinceYear<1911)||(CompetitionOpenSinceMonth>12)){
       // 	console.log(Store,DayOfWeek,today,Promo,Open,SchoolHoliday,StoreType,Assortment,CompetitionDistance,CompetitionOpenSinceYear,CompetitionOpenSinceMonth,Promo2);
