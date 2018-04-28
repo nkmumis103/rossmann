@@ -11,13 +11,13 @@ $(document).ready(function(){
 			$("#output_sale").html("當日店休！"+today+" 的預測銷售額為：0 (USD)");
 		}
 		else{
-			if((CompetitionOpenSinceYear<1911)||(CompetitionOpenSinceMonth>12)){
-				console.log(Store,DayOfWeek,today,Promo,Open,SchoolHoliday,StoreType,Assortment,CompetitionDistance,CompetitionOpenSinceYear,CompetitionOpenSinceMonth,Promo2);
-				alert("資料格式錯誤，請填入完整資料!!(格式)");
-				$("#submit").removeAttr("disabled");
-				$("#submit_fut").removeAttr("disabled");
-			}
-			else{
+			// if((CompetitionOpenSinceYear<1911)||(CompetitionOpenSinceMonth>12)){
+			// 	console.log(Store,DayOfWeek,today,Promo,Open,SchoolHoliday,StoreType,Assortment,CompetitionDistance,CompetitionOpenSinceYear,CompetitionOpenSinceMonth,Promo2);
+			// 	alert("資料格式錯誤，請填入完整資料!!(格式)");
+			// 	$("#submit").removeAttr("disabled");
+			// 	$("#submit_fut").removeAttr("disabled");
+			// }
+			// else{
 				var req = ocpu.rpc("rossmann", {
 				  Store : Store,
 				  DayOfWeek : DayOfWeek,
@@ -72,7 +72,7 @@ $(document).ready(function(){
 					$("#submit_fut").removeAttr("disabled");
 				});
 			}
-		}
+		// }
 	});
 
 	$("#submit_fut").on("click", function(){
@@ -80,13 +80,13 @@ $(document).ready(function(){
 		$("#submit_fut").attr("disabled", "disabled");
 		get_val();
 
-		if((Store=="")||(DayOfWeek=="")||(today=="")||(Promo=="")||(Open=="")||(SchoolHoliday=="")||(StoreType=="")||(Assortment=="")||(CompetitionDistance=="")||(CompetitionOpenSinceYear<1911)||(CompetitionOpenSinceMonth=="")||(CompetitionOpenSinceMonth>12)||(Promo2=="")){
-			alert("資料格式錯誤，請填入完整資料!!");
-			console.log(Store,DayOfWeek,today,Promo,Open,SchoolHoliday,StoreType,Assortment,CompetitionDistance,CompetitionOpenSinceYear,CompetitionOpenSinceMonth,Promo2);
-			$("#submit").removeAttr("disabled");
-			$("#submit_fut").removeAttr("disabled");
-		}
-		else{
+		// if((CompetitionOpenSinceYear<1911)||(CompetitionOpenSinceMonth>12)){
+		// 	alert("資料格式錯誤，請填入完整資料!!");
+		// 	console.log(Store,DayOfWeek,today,Promo,Open,SchoolHoliday,StoreType,Assortment,CompetitionDistance,CompetitionOpenSinceYear,CompetitionOpenSinceMonth,Promo2);
+		// 	$("#submit").removeAttr("disabled");
+		// 	$("#submit_fut").removeAttr("disabled");
+		// }
+		// else{
 			$(".preddiv").css('height','530px');
 			$(".pred").css("display", "none");
 			$("#output_plot").css("display", "block");
@@ -113,7 +113,7 @@ $(document).ready(function(){
 				alert("資料格式錯誤，請填入完整資料!!");
 				console.log("Server error: " + req.responseText + "error：" + JSON.stringify(err));
 			});
-		}
+		// }
 	});
 
 	function get_val(){
