@@ -108,9 +108,9 @@ $(document).ready(function() {
 	      Promo2SinceWeek: Promo2SinceWeek,
 	      PromoInterval: PromoInterval
 	    }).always(function() {
+				$("#output_plot").css("display", "block");
 				$(".preddiv").css('height', '530px');
 				$(".pred").css("display", "none");
-				$("#output_plot").css("display", "block");
 	      $("#submit").removeAttr("disabled");
 	      $("#submit_fut").removeAttr("disabled");
 	    }).fail(function(err) {
