@@ -5,7 +5,7 @@ $(document).ready(function() {
     console.log(dis3);
     if (dis3.match('disabled') == null) {
 			get_val();
-      // $("#push").attr("disabled", "disabled");
+      $("#push").attr("disabled", "disabled");
       /*if((Store=="")||(DayOfWeek=="")||(today=="")||(Promo=="")||(Open=="")||(SchoolHoliday=="")||(StoreType=="")||(Assortment=="")||(CompetitionDistance=="")||(CompetitionOpenSinceYear<1911)||(CompetitionOpenSinceMonth=="")||(CompetitionOpenSinceMonth>9)||(Promo2=="")||(Sales=="")){
       	alert("資料格式錯誤，請填入完整資料!!");
       	//console.log(Store,DayOfWeek,today,Promo,Open,SchoolHoliday,StoreType,Assortment,CompetitionDistance,CompetitionOpenSinceYear,CompetitionOpenSinceMonth,Promo2,Sales);
@@ -38,14 +38,14 @@ $(document).ready(function() {
         success: function(resp) {
           // console.log(resp);
           alert("傳送成功！");
-					// $("#push").removeAttr("disabled");
+					$("#push").removeAttr("disabled");
         },
         error: function(jqXHR, textStatus, errorThrown) {
           //console.log(jqXHR);
           //console.log(textStatus);
           //console.log(errorThrown);
 					alert("傳送失敗！");
-					// $("#push").removeAttr("disabled");
+					$("#push").removeAttr("disabled");
         }
       });
     }
