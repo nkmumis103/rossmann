@@ -88,7 +88,7 @@
 					</div>
 					8.與競爭對手店面距離(公尺)
 					<div class="form-group">
-					<input class="form-control" type="number" id="CompetitionDistance" min="0" required="required" onkeypress="return (/[\d]/.test(String.fromCharCode(event.keyCode)))">
+					<input class="form-control" type="number" id="CompetitionDistance" min="0" required="required" onkeypress="value=value.replace(/[^\d.]/g,'')">
 					<div class="help-block with-errors"></div>
 					</div>
 				</div>
@@ -138,32 +138,43 @@
 					上傳資料<i class="fa fa-question-circle-o tooltip" aria-hidden="true" title="輸入個欄位資料及銷售額，即可將資料上傳至資料庫成為新的一筆數據"></i>
 				</div>
 				<form role="form" data-toggle="validator">
-				<div class="col-sm-4 form-group">
+				<div class="col-sm-4">
 					1.店家ID
+					<div class="form-group">
 					<input class="form-control" type="number" id="Store_push" min="1" required="required" onkeypress="return (/[\d]/.test(String.fromCharCode(event.keyCode)))">
+				</div>
 					2.當日日期
+					<div class="form-group">
 					<input class="form-control" type="date" id="Date_push" required="required">
+				</div>
 					3.當日是否促銷
+					<div class="form-group">
 					<select class="form-control" id="Promo_push" required="required">
 						<option selected disabled>請選擇</option>
 						<option value="1">是</option>
 						<option value="0">否</option>
 					</select>
+				</div>
 					4.當日是否開店
+					<div class="form-group">
 					<select class="form-control" id="Open_push" required="required">
 						<option selected disabled>請選擇</option>
 						<option value="1">是</option>
 						<option value="0">否</option>
 					</select>
 				</div>
-				<div class="col-sm-4 form-group">
+				</div>
+				<div class="col-sm-4">
 					5.是否為學校休假日
+					<div class="form-group">
 					<select class="form-control" id="SchoolHoliday_push" required="required">
 						<option selected disabled>請選擇</option>
 						<option value="1">是</option>
 						<option value="0">否</option>
 					</select>
+				</div>
 					6.商店模式
+					<div class="form-group">
 					<select class="form-control" id="StoreType_push" required="required">
 						<option selected disabled>請選擇</option>
 						<option value="1">a</option>
@@ -171,29 +182,42 @@
 						<option value="3">c</option>
 						<option value="4">d</option>
 					</select>
+				</div>
 					7.分類
+					<div class="form-group">
 					<select class="form-control" id="Assortment_push" required="required">
 						<option selected disabled>請選擇</option>
 						<option value="1">a</option>
 						<option value="2">b</option>
 						<option value="3">c</option>
 					</select>
+				</div>
 					8.與競爭對手店面距離(公尺)
+					<div class="form-group">
 					<input class="form-control" type="number" id="CompetitionDistance_push" min="0" required="required" onkeypress="return (/[\d]/.test(String.fromCharCode(event.keyCode)))">
 				</div>
-				<div class="col-sm-4 form-group">
+				</div>
+				<div class="col-sm-4">
 					9.競爭對手開店年份(西元)
+					<div class="form-group">
 					<input class="form-control" type="number" id="CompetitionOpenSinceYear_push" min="1911" required="required" onkeypress="return (/[\d]/.test(String.fromCharCode(event.keyCode)))">
+				</div>
 					10.競爭對手開店月份
+					<div class="form-group">
 					<input class="form-control" type="number" id="CompetitionOpenSinceMonth_push" min="1" max="12" required="required" onkeypress="return (/[\d]/.test(String.fromCharCode(event.keyCode)))">
+				</div>
 					11.是否持續促銷
+					<div class="form-group">
 					<select class="form-control" id="Promo2_push" required="required">
 						<option selected disabled>請選擇</option>
 						<option value="1">是</option>
 						<option value="0">否</option>
 					</select>
+				</div>
 					12.當日銷售額
+					<div class="form-group">
 					<input class="form-control" type="number" id="Sales" required="required" onkeypress="return (/[\d]/.test(String.fromCharCode(event.keyCode)))">
+				</div>
 					<!-- 13.持續促銷開始年份
 					<input class="form-control" type="number" id="Promo2SinceYear" min="1911">
 					14.持續促銷開始周
