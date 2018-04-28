@@ -4,8 +4,8 @@ $(document).ready(function(){
 	$("#submit").on("click", function(){
 	//disable the button to prevent multiple clicks
 		get_val();
-		// $("#submit").attr("disabled", "disabled");
-		// $("#submit_fut").attr("disabled", "disabled");
+		$("#submit").attr("disabled", "disabled");
+		$("#submit_fut").attr("disabled", "disabled");
 		dis1=$("#submit").attr("disabled");
 		console.log(a);
 		if(Open==0){
@@ -80,8 +80,8 @@ $(document).ready(function(){
 	});
 
 	$("#submit_fut").on("click", function(){
-		$("#submit").attr("disabled", "disabled");
-		$("#submit_fut").attr("disabled", "disabled");
+		// $("#submit").attr("disabled", "disabled");
+		// $("#submit_fut").attr("disabled", "disabled");
 		get_val();
 
 		// if((CompetitionOpenSinceYear<1911)||(CompetitionOpenSinceMonth>12)){
@@ -91,9 +91,7 @@ $(document).ready(function(){
 		// 	$("#submit_fut").removeAttr("disabled");
 		// }
 		// else{
-			$(".preddiv").css('height','530px');
-			$(".pred").css("display", "none");
-			$("#output_plot").css("display", "block");
+
 			var req = $("#output_plot").rplot("rossmann_fut", {
 			  Store : Store,
 			  DayOfWeek : DayOfWeek,
@@ -111,6 +109,9 @@ $(document).ready(function(){
 			  Promo2SinceWeek : Promo2SinceWeek,
 			  PromoInterval : PromoInterval
 			 }).always(function(){
+				 $(".preddiv").css('height','530px');
+	 			$(".pred").css("display", "none");
+	 			$("#output_plot").css("display", "block");
 				 $("#submit").removeAttr("disabled");
 				$("#submit_fut").removeAttr("disabled");
 			}).fail(function(err){
