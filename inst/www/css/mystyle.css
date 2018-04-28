@@ -77,7 +77,6 @@ html,body{
 }
 #push:hover{
 	background-color:rgba(135,57,72,1);
-	/* border: 1px solid #974051; */
 }
 .preddiv{
 	padding:0 5%;
@@ -138,7 +137,7 @@ html,body{
 	text-align:center;
 	line-height:50px;
 	/* background-color:rgba(190,190,190,1);*/
-	color:gray; 
+	color:gray;
 	height:50px;
 	width:100%;
 	position:relative;

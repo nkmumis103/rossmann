@@ -1,16 +1,18 @@
 $(document).ready(function(){
-	var Store,DayOfWeek,today,Promo,Open,SchoolHoliday,StoreType,Assortment,CompetitionDistance,CompetitionOpenSinceYear,CompetitionOpenSinceMonth,Promo2,Promo2SinceYear,Promo2SinceWeek,PromoInterval,best_Promo,best_SchoolHoliday,best_Promo2;
+	var dis1,dis2,Store,DayOfWeek,today,Promo,Open,SchoolHoliday,StoreType,Assortment,CompetitionDistance,CompetitionOpenSinceYear,CompetitionOpenSinceMonth,Promo2,Promo2SinceYear,Promo2SinceWeek,PromoInterval,best_Promo,best_SchoolHoliday,best_Promo2;
 	/* $(".pred").css("display", "none"); */
 	$("#submit").on("click", function(){
 	//disable the button to prevent multiple clicks
 		get_val();
-		$("#submit").attr("disabled", "disabled");
-		$("#submit_fut").attr("disabled", "disabled");
-		var a=$("#submit").attr("disabled");
+		// $("#submit").attr("disabled", "disabled");
+		// $("#submit_fut").attr("disabled", "disabled");
+		dis1=$("#submit").attr("disabled");
 		console.log(a);
 		if(Open==0){
 			// alert("當日店休!!");
 			$("#output_sale").html("當日店休！"+today+" 的預測銷售額為：0 (USD)");
+			$("#submit").removeAttr("disabled");
+			$("#submit_fut").removeAttr("disabled");
 		}
 		else{
 			// if((CompetitionOpenSinceYear<1911)||(CompetitionOpenSinceMonth>12)){
