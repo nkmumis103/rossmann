@@ -65,6 +65,7 @@ $(document).ready(function() {
 					else{
 						$("#output_sale").html(today + " 的預測銷售額為：" + output.message + "(USD)<hr>最佳配置：促銷為『" + best_Promo + "』，持續促銷為『" + best_Promo2 + "』<br><div style='color:red;'>最佳銷售額為：" + output.best_sales + "(USD)</div>");
 					}
+          console.log(Store, DayOfWeek, today, Promo, Open, SchoolHoliday, StoreType, Assortment, CompetitionDistance, CompetitionOpenSinceYear, CompetitionOpenSinceMonth, Promo2, Promo2SinceYear, Promo2SinceWeek, PromoInterval);
 					//alert(output.message);學校休假日為『"+best_SchoolHoliday+"』，
 				});
 
